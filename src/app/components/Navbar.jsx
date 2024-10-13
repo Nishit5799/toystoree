@@ -6,10 +6,23 @@ import Image from "next/image";
 import React from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const options = ["Category", "Age", "Brand", "Characters"];
+
+  const handleNextPageScroll = (event) => {
+    const element = document.querySelector(".page2");
+    window.scrollTo({
+      top: element?.getBoundingClientRect().top,
+      left: 0,
+      behavior: "smooth",
+    });
+
+    // Close the menu when a menu item is clicked
+    setIsMenuOpen(false);
+  };
 
   // GSAP Animation for the Navbar
   useGSAP(() => {
@@ -35,8 +48,10 @@ const Navbar = () => {
     <div className="relative">
       <div className="max-w-screen-2xl py-4 w-full px-10 mx-auto sm:px-[5vw] flex justify-between items-center font-['Bayon'] fixed bg-transparent top-0 left-0 bg-[#F7F1EC] z-10">
         {/* Logo */}
-        <div className="logo h-16 w-16 rounded-full overflow-hidden sm:h-20 sm:w-20">
-          <Image src="/logoo.svg" height={1000} width={1000} alt="funtoy" />
+        <div className="logo h-16 w-16 rounded-full overflow-hidden sm:h-20 sm:w-20 cursor-pointer">
+          <Link href="/">
+            <Image src="/logoo.svg" height={1000} width={1000} alt="funtoy" />
+          </Link>
         </div>
 
         {/* Options (visible on large screens) */}
@@ -46,7 +61,7 @@ const Navbar = () => {
               key={i}
               className="options text-lg w-fit h-7 text-gray-500 font-normal sm:hover:-translate-y-7 sm:hover:text-black sm:transition-all sm:duration-300 cursor-pointer"
             >
-              <h1>
+              <h1 onClick={handleNextPageScroll}>
                 {e} <br /> {e}
               </h1>
             </div>
@@ -65,14 +80,14 @@ const Navbar = () => {
 
       {/* Sliding Screen (visible when menu is open) */}
       <div
-        className={`fixed top-0 right-0 h-full w-[80%] bg-cover bg-center z-50 transform transition-transform duration-500 ${
+        className={`fixed top-0 right-0 h-full w-[80%] bg-[#f7f1ec7f] bg-cover bg-center z-50 transform transition-transform duration-500 ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{
           backgroundImage: `url('https://source.unsplash.com/random/800x600')`, // Random background image
         }}
       >
-        <div className="p-6 flex justify-end">
+        <div className="p-6 flex justify-end text-black">
           {/* Close button */}
           <IoMdClose
             size={30}
@@ -87,7 +102,7 @@ const Navbar = () => {
             <h1
               key={index}
               className="text-2xl text-gray-700 cursor-pointer hover:text-black"
-              onClick={toggleMenu} // Close the menu when an option is clicked
+              onClick={handleNextPageScroll} // Close the menu when an option is clicked
             >
               {option}
             </h1>
