@@ -8,7 +8,7 @@ import { IoMdMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const options = ["Category", "Age", "Brand", "Characters"];
 
