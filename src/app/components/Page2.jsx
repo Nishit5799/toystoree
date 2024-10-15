@@ -7,10 +7,7 @@ import Model2 from "./Model2";
 
 const Page2 = () => {
   return (
-    <div
-      ref={page2ref}
-      className="page2 h-screen sm:h-screen w-full sm:flex   bg-black font-['Bayon'] text-white"
-    >
+    <div className="page2 h-screen sm:h-screen w-full sm:flex   bg-black font-['Bayon'] text-white">
       <div className="container w-full h-full text-center sm:flex sm:flex-col sm:justify-between sm:items-center sm:h-full sm:w-1/2 px-10 py-7 ">
         <h1 className="text-[15vw] sm:text-[8vw] mb-8 sm:mb-4">
           Creative Toys
