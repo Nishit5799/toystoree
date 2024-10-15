@@ -46,7 +46,7 @@ const Navbar = ({}) => {
 
   return (
     <div className="relative">
-      <div className="max-w-screen-2xl py-4 w-full px-10 mx-auto sm:px-[5vw] flex justify-between items-center font-['Bayon'] fixed bg-transparent top-0 left-0 bg-[#F7F1EC] z-10">
+      <div className="max-w-screen-2xl py-4 w-full px-10 mx-auto sm:px-[5vw] flex justify-between items-center font-['Bayon'] absolute bg-transparent top-0 left-0 bg-[#F7F1EC] z-10">
         {/* Logo */}
         <div className="logo h-16 w-16 rounded-full overflow-hidden sm:h-20 sm:w-20 cursor-pointer">
           <Link href="/">
