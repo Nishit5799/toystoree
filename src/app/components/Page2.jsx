@@ -2,16 +2,10 @@
 
 import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React from "react";
 import Model2 from "./Model2";
-import gsap from "gsap/all";
-import { useGSAP } from "@gsap/react";
 
 const Page2 = () => {
-  const page2ref = useRef(null);
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
-  });
   return (
     <div
       ref={page2ref}
