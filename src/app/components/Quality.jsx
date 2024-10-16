@@ -83,7 +83,7 @@ const Quality = () => {
           className={`qualities font-['Bayon']  absolute text-center h-16 w-16 sm:h-32 sm:w-32 text-black z-[1] overflow-hidden rounded-full transition-all duration-500 ease-in-out hover:scale-110 hover:bg-[#f7f1ec0e] hover:shadow-[0px_0px_20px_10px_rgba(255,165,0,0.7)]  ${quality.top} ${quality.left} ${quality.top2} ${quality.left2} `}
         >
           <div className="qual h-full w-full flex items-center justify-center bg-[#f7f1ec7f] cursor-pointer">
-            <div className="text-sm h-10 overflow-hidden w-full sm:text-[1.2vw] sm:h-5 sm:w-full sm:overflow-hidden ">
+            <div className="text-sm h-10 overflow-hidden w-full sm:text-[1vw] sm:h-5 sm:w-full sm:overflow-hidden ">
               <h1 className="h-full w-full hover:-translate-y-10 sm:hover:-translate-y-5  transition-all duration-300">
                 {quality.name} <br /> {quality.name}
               </h1>

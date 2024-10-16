@@ -46,11 +46,17 @@ const Navbar = ({}) => {
 
   return (
     <div className="relative">
-      <div className="max-w-screen-2xl py-4 w-full px-10 mx-auto sm:px-[5vw] flex justify-between items-center font-['Bayon'] absolute bg-transparent top-0 left-0 bg-[#F7F1EC] z-10">
+      <div className="max-w-screen-3xl  py-4 sm:pt-2 sm:pb-0 w-full px-10 mx-auto sm:px-[5vw] flex justify-between items-center font-['Bayon'] absolute bg-transparent top-0 left-0 bg-[#F7F1EC] z-10">
         {/* Logo */}
-        <div className="logo h-16 w-16 rounded-full overflow-hidden sm:h-20 sm:w-20 cursor-pointer">
+        <div className="logo h-16 w-16 rounded-full overflow-hidden sm:h-28 sm:w-28 cursor-pointer">
           <Link href="/">
-            <Image src="/logoo.svg" height={1000} width={1000} alt="funtoy" />
+            <Image
+              src="/logoo.svg"
+              height={1000}
+              width={1000}
+              alt="funtoy"
+              className="w-full h-full"
+            />
           </Link>
         </div>
 
@@ -59,7 +65,7 @@ const Navbar = ({}) => {
           {options.map((e, i) => (
             <div
               key={i}
-              className="options text-lg w-fit h-7 text-gray-500 font-normal sm:hover:-translate-y-7 sm:hover:text-black sm:transition-all sm:duration-300 cursor-pointer"
+              className="options text-lg w-fit h-7 text-gray-500 font-normal sm:hover:-translate-y-7 sm:text-2xl sm:hover:text-black sm:transition-all sm:duration-300 cursor-pointer"
             >
               <h1 onClick={handleNextPageScroll}>
                 {e} <br /> {e}

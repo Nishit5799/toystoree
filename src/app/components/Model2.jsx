@@ -21,7 +21,7 @@ const Model2 = () => {
       );
       orbitControlsRef.current.update();
     }
-    model2ref.current.rotation.y += 0.01;
+    model2ref.current.rotation.y += 0.003;
   });
 
   return (

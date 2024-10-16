@@ -5,6 +5,7 @@ import React from "react";
 import Toys from "./components/Toys";
 import Quality from "./components/Quality";
 import Page2 from "./components/Page2";
+import Page3 from "./components/Page3";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
         </Canvas>
       </div>
       <Page2 />
+      <Page3 />
     </>
   );
 };
