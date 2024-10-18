@@ -27,7 +27,7 @@ const Page2_Para = () => {
         scrollTrigger: {
           trigger: ".paraTop", // Trigger based on container
           scrub: 3, // Set to false for smoother animation
-          markers: true, // Debug markers (remove in production)
+
           start: "top 80%", // When container hits 80% of the viewport
           end: "top 70%", // End trigger point
         },
